@@ -1,20 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Log in{% endblock %}
 
 {% block body %}
-    <form method="post">
-        {% if error %}
-            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
+    <!-- Flash messages for success -->
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
 
-        {% if app.user %}
-            <div class="mb-3">
-                You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+    <!-- Login form -->
+    <form method="post">
+        <!-- Display login errors -->
+        {% if error %}
+            <div class="alert alert-danger">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
             </div>
         {% endif %}
 
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <!-- Show user information if logged in -->
+        {% if app.user %}
+            <div class="mb-3">
+                You are logged in as {{ app.user.userIdentifier }},
+                <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
+
+        <h1 class="h3 mb-3 font-weight-normal text-center">Please sign in</h1>
 
         <div class="form-group">
             <label for="username">Username</label>
@@ -26,18 +39,21 @@
             <input type="password" name="_password" id="password" class="form-control" autocomplete="current-password" required>
         </div>
 
+        <!-- CSRF token for security -->
         <input type="hidden" name="_csrf_token"
                value="{{ csrf_token('authenticate') }}"
         >
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">
+        <!-- Submit button -->
+        <button class="btn btn-lg btn-primary btn-block mt-3" type="submit">
             Sign in
         </button>
     </form>
 
     <hr>
 
-    <div class="text-center">
+    <!-- Create an Account section -->
+    <div class="text-center mt-4">
         <p>Don't have an account?</p>
         <a href="{{ path('app_register') }}" class="btn btn-lg btn-success">Create an Account</a>
     </div>
