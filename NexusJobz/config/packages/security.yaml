@@ -37,8 +37,15 @@ security:
            
 
     access_control:
-        #- { path: ^/dev, roles: ROLE_DEV }
-        #- { path: ^/company, roles: ROLE_COMPANY }
+        # Accès public aux pages de login et register
+        - { path: ^/dev/login, roles: PUBLIC_ACCESS }
+        - { path: ^/dev/register, roles: PUBLIC_ACCESS }
+        - { path: ^/company/login, roles: PUBLIC_ACCESS }
+        - { path: ^/company/register, roles: PUBLIC_ACCESS }
+
+        # Bloquer l'accès sans rôle approprié aux autres pages
+        - { path: ^/dev, roles: ROLE_DEV }
+        - { path: ^/company, roles: ROLE_COMPANY }
 when@test:
     security:
         password_hashers:
