@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Bienvenue sur Nexus</h1>
+    <p>Veuillez choisir votre rôle pour continuer :</p>
+    <div>
+        <a href="{{ path('app_dev_login') }}" class="btn btn-primary">Je suis Développeur</a>
+        <a href="{{ path('app_company_login') }}" class="btn btn-secondary">Je suis une Entreprise</a>
+    </div>
+{% endblock %}
+
