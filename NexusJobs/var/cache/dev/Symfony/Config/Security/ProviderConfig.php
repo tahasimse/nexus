@@ -3,9 +3,9 @@
 namespace Symfony\Config\Security;
 
 require_once __DIR__.\DIRECTORY_SEPARATOR.'ProviderConfig'.\DIRECTORY_SEPARATOR.'ChainConfig.php';
-require_once __DIR__.\DIRECTORY_SEPARATOR.'ProviderConfig'.\DIRECTORY_SEPARATOR.'EntityConfig.php';
 require_once __DIR__.\DIRECTORY_SEPARATOR.'ProviderConfig'.\DIRECTORY_SEPARATOR.'MemoryConfig.php';
 require_once __DIR__.\DIRECTORY_SEPARATOR.'ProviderConfig'.\DIRECTORY_SEPARATOR.'LdapConfig.php';
+require_once __DIR__.\DIRECTORY_SEPARATOR.'ProviderConfig'.\DIRECTORY_SEPARATOR.'EntityConfig.php';
 
 use Symfony\Component\Config\Loader\ParamConfigurator;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
@@ -17,9 +17,9 @@ class ProviderConfig
 {
     private $id;
     private $chain;
-    private $entity;
     private $memory;
     private $ldap;
+    private $entity;
     private $_usedProperties = [];
 
     /**
@@ -47,18 +47,6 @@ class ProviderConfig
         return $this->chain;
     }
 
-    public function entity(array $value = []): \Symfony\Config\Security\ProviderConfig\EntityConfig
-    {
-        if (null === $this->entity) {
-            $this->_usedProperties['entity'] = true;
-            $this->entity = new \Symfony\Config\Security\ProviderConfig\EntityConfig($value);
-        } elseif (0 < \func_num_args()) {
-            throw new InvalidConfigurationException('The node created by "entity()" has already been initialized. You cannot pass values the second time you call entity().');
-        }
-
-        return $this->entity;
-    }
-
     public function memory(array $value = []): \Symfony\Config\Security\ProviderConfig\MemoryConfig
     {
         if (null === $this->memory) {
@@ -83,6 +71,18 @@ class ProviderConfig
         return $this->ldap;
     }
 
+    public function entity(array $value = []): \Symfony\Config\Security\ProviderConfig\EntityConfig
+    {
+        if (null === $this->entity) {
+            $this->_usedProperties['entity'] = true;
+            $this->entity = new \Symfony\Config\Security\ProviderConfig\EntityConfig($value);
+        } elseif (0 < \func_num_args()) {
+            throw new InvalidConfigurationException('The node created by "entity()" has already been initialized. You cannot pass values the second time you call entity().');
+        }
+
+        return $this->entity;
+    }
+
     public function __construct(array $value = [])
     {
         if (array_key_exists('id', $value)) {
@@ -97,12 +97,6 @@ class ProviderConfig
             unset($value['chain']);
         }
 
-        if (array_key_exists('entity', $value)) {
-            $this->_usedProperties['entity'] = true;
-            $this->entity = new \Symfony\Config\Security\ProviderConfig\EntityConfig($value['entity']);
-            unset($value['entity']);
-        }
-
         if (array_key_exists('memory', $value)) {
             $this->_usedProperties['memory'] = true;
             $this->memory = new \Symfony\Config\Security\ProviderConfig\MemoryConfig($value['memory']);
@@ -113,6 +107,12 @@ class ProviderConfig
             $this->_usedProperties['ldap'] = true;
             $this->ldap = new \Symfony\Config\Security\ProviderConfig\LdapConfig($value['ldap']);
             unset($value['ldap']);
+        }
+
+        if (array_key_exists('entity', $value)) {
+            $this->_usedProperties['entity'] = true;
+            $this->entity = new \Symfony\Config\Security\ProviderConfig\EntityConfig($value['entity']);
+            unset($value['entity']);
         }
 
         if ([] !== $value) {
@@ -129,14 +129,14 @@ class ProviderConfig
         if (isset($this->_usedProperties['chain'])) {
             $output['chain'] = $this->chain->toArray();
         }
-        if (isset($this->_usedProperties['entity'])) {
-            $output['entity'] = $this->entity->toArray();
-        }
         if (isset($this->_usedProperties['memory'])) {
             $output['memory'] = $this->memory->toArray();
         }
         if (isset($this->_usedProperties['ldap'])) {
             $output['ldap'] = $this->ldap->toArray();
+        }
+        if (isset($this->_usedProperties['entity'])) {
+            $output['entity'] = $this->entity->toArray();
         }
 
         return $output;

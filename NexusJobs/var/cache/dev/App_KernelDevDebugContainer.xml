@@ -261,9 +261,6 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
-    <service id="App\Repository\DeveloperProfile" class="App\Repository\DeveloperProfile" autowire="true" autoconfigure="true">
-      <tag name="container.error" message="The autoloader expected class &quot;App\Repository\DeveloperProfile&quot; to be defined in file &quot;/var/www/NexusJobs/vendor/composer/../../src/Repository/DeveloperProfile.php&quot;. The file was found but the class was not in it, the class name or namespace probably has a typo."/>
-    </service>
     <service id="App\Repository\DeveloperProfileRepository" class="App\Repository\DeveloperProfileRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -275,9 +272,6 @@
     <service id="App\Repository\FavoriteRepository" class="App\Repository\FavoriteRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
-    </service>
-    <service id="App\Repository\JobPost" class="App\Repository\JobPost" autowire="true" autoconfigure="true">
-      <tag name="container.error" message="The autoloader expected class &quot;App\Repository\JobPost&quot; to be defined in file &quot;/var/www/NexusJobs/vendor/composer/../../src/Repository/JobPost.php&quot;. The file was found but the class was not in it, the class name or namespace probably has a typo."/>
     </service>
     <service id="App\Repository\JobPostRepository" class="App\Repository\JobPostRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
