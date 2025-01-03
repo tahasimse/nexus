@@ -16,6 +16,24 @@ class JobPostRepository extends ServiceEntityRepository
         parent::__construct($registry, JobPost::class);
     }
 
+    public function findMostViewedPosts(int $limit): array
+{
+    return $this->createQueryBuilder('j')
+        ->orderBy('j.views', 'DESC')
+        ->setMaxResults($limit)
+        ->getQuery()
+        ->getResult();
+}
+
+public function findLatestPosts(int $limit): array
+{
+    return $this->createQueryBuilder('j')
+        ->orderBy('j.createdAt', 'DESC')
+        ->setMaxResults($limit)
+        ->getQuery()
+        ->getResult();
+}
+
     //    /**
     //     * @return JobPost[] Returns an array of JobPost objects
     //     */

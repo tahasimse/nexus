@@ -16,6 +16,24 @@ class DeveloperProfileRepository extends ServiceEntityRepository
         parent::__construct($registry, DeveloperProfile::class);
     }
 
+    public function findMostViewedProfiles(int $limit): array
+{
+    return $this->createQueryBuilder('d')
+        ->orderBy('d.views', 'DESC')
+        ->setMaxResults($limit)
+        ->getQuery()
+        ->getResult();
+}
+
+public function findLatestProfiles(int $limit): array
+{
+    return $this->createQueryBuilder('d')
+        ->orderBy('d.createdAt', 'DESC')
+        ->setMaxResults($limit)
+        ->getQuery()
+        ->getResult();
+}
+
     //    /**
     //     * @return DeveloperProfile[] Returns an array of DeveloperProfile objects
     //     */

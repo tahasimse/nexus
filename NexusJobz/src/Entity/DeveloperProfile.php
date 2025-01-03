@@ -44,6 +44,15 @@ class DeveloperProfile
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $avatarUrl = null;
 
+    #[ORM\Column(type: 'integer')]
+    private int $views = 0;
+
+    public function incrementViews(): static
+    {
+        $this->views++;
+        return $this;
+    }
+
     /**
      * @var Collection<int, Matching>
      */
