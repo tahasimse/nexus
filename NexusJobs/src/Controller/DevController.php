@@ -27,6 +27,14 @@ public function register(
     $form = $this->createForm(RegistrationFormType::class, $user);
     $form->handleRequest($request);
 
+    if ($form->isSubmitted() && !$form->isValid()) {
+        $errors = $form->getErrors(true, false);
+        foreach ($errors as $error) {
+            dump($error->getMessage());
+        }
+        exit; // This will print errors directly to the screen. You can use it to inspect errors in the profiler.
+    }
+
     if ($form->isSubmitted() && $form->isValid()) {
         $hashedPassword = $passwordHasher->hashPassword(
             $user,
