@@ -46,25 +46,60 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
 
         // line 1
         yield "<!DOCTYPE html>
-<html>
+<html lang=\"fr\">
 <head>
     <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>";
-        // line 5
+        // line 6
         yield from $this->unwrap()->yieldBlock('title', $context, $blocks);
         yield "</title>
     <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\">
     ";
-        // line 7
-        yield from $this->unwrap()->yieldBlock('stylesheets', $context, $blocks);
         // line 8
+        yield from $this->unwrap()->yieldBlock('stylesheets', $context, $blocks);
+        // line 9
         yield "</head>
 <body>
+
+    <!-- Menu de navigation -->
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+        <div class=\"container-fluid\">
+            <!-- Lien vers la page d'accueil -->
+            <a class=\"navbar-brand\" href=\"";
+        // line 16
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+        yield "\">Nexus</a>
+            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                <span class=\"navbar-toggler-icon\"></span>
+            </button>
+            <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                <ul class=\"navbar-nav ms-auto\">
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"";
+        // line 23
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("company_home");
+        yield "\">Accueil Entreprise</a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"";
+        // line 26
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("developer_home");
+        yield "\">Accueil Développeur</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
     ";
-        // line 10
+        // line 34
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 11
-        yield "    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js\"></script>
+        // line 35
+        yield "
+    <!-- Bootstrap JS Bundle -->
+    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js\"></script>
 </body>
 </html>
 ";
@@ -74,7 +109,7 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
         yield from [];
     }
 
-    // line 5
+    // line 6
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -91,7 +126,7 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
         yield from [];
     }
 
-    // line 7
+    // line 8
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -107,7 +142,7 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
         yield from [];
     }
 
-    // line 10
+    // line 34
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -134,23 +169,57 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
     /**
      * @codeCoverageIgnore
      */
+    public function isTraitable(): bool
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
     public function getDebugInfo(): array
     {
-        return array (  111 => 10,  95 => 7,  78 => 5,  67 => 11,  65 => 10,  61 => 8,  59 => 7,  54 => 5,  48 => 1,);
+        return array (  146 => 34,  130 => 8,  113 => 6,  100 => 35,  98 => 34,  87 => 26,  81 => 23,  71 => 16,  62 => 9,  60 => 8,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("<!DOCTYPE html>
-<html>
+<html lang=\"fr\">
 <head>
     <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>{% block title %}Nexus{% endblock %}</title>
     <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
+
+    <!-- Menu de navigation -->
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+        <div class=\"container-fluid\">
+            <!-- Lien vers la page d'accueil -->
+            <a class=\"navbar-brand\" href=\"{{ path('app_home') }}\">Nexus</a>
+            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                <span class=\"navbar-toggler-icon\"></span>
+            </button>
+            <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                <ul class=\"navbar-nav ms-auto\">
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"{{ path('company_home') }}\">Accueil Entreprise</a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"{{ path('developer_home') }}\">Accueil Développeur</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
     {% block body %}{% endblock %}
+
+    <!-- Bootstrap JS Bundle -->
     <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js\"></script>
 </body>
 </html>

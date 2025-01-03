@@ -261,6 +261,9 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\DeveloperProfile" class="App\Repository\DeveloperProfile" autowire="true" autoconfigure="true">
+      <tag name="container.error" message="The autoloader expected class &quot;App\Repository\DeveloperProfile&quot; to be defined in file &quot;/var/www/NexusJobs/vendor/composer/../../src/Repository/DeveloperProfile.php&quot;. The file was found but the class was not in it, the class name or namespace probably has a typo."/>
+    </service>
     <service id="App\Repository\DeveloperProfileRepository" class="App\Repository\DeveloperProfileRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -272,6 +275,9 @@
     <service id="App\Repository\FavoriteRepository" class="App\Repository\FavoriteRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\JobPost" class="App\Repository\JobPost" autowire="true" autoconfigure="true">
+      <tag name="container.error" message="The autoloader expected class &quot;App\Repository\JobPost&quot; to be defined in file &quot;/var/www/NexusJobs/vendor/composer/../../src/Repository/JobPost.php&quot;. The file was found but the class was not in it, the class name or namespace probably has a typo."/>
     </service>
     <service id="App\Repository\JobPostRepository" class="App\Repository\JobPostRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -312,7 +318,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.BjnIB1P"/>
+      <argument type="service" id=".service_locator.RIVawP7"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -1683,7 +1689,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.BjnIB1P"/>
+      <argument type="service" id=".service_locator.RIVawP7"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -5391,7 +5397,31 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.3QECKYg" method="withContext"/>
     </service>
-    <service id=".service_locator.BjnIB1P" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.XOSE210" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="developerRepo" type="service_closure" id="App\Repository\DeveloperProfileRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.XOSE210.App\Controller\HomeController::companyHome()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\HomeController::companyHome()"/>
+      <argument>App\Controller\HomeController::companyHome()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.XOSE210" method="withContext"/>
+    </service>
+    <service id=".service_locator.I5nia.Y" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="jobPostRepo" type="service_closure" id="App\Repository\JobPostRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.I5nia.Y.App\Controller\HomeController::developerHome()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\HomeController::developerHome()"/>
+      <argument>App\Controller\HomeController::developerHome()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.I5nia.Y" method="withContext"/>
+    </service>
+    <service id=".service_locator.RIVawP7" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.zHyJIs5.kernel::registerContainerConfiguration()"/>
@@ -5402,12 +5432,16 @@
         <argument key="App\Controller\CompanyController::login" type="service_closure" id=".service_locator.3QECKYg.App\Controller\CompanyController::login()"/>
         <argument key="App\Controller\DevController::register" type="service_closure" id=".service_locator.5SuUxla.App\Controller\DevController::register()"/>
         <argument key="App\Controller\DevController::login" type="service_closure" id=".service_locator.3QECKYg.App\Controller\DevController::login()"/>
+        <argument key="App\Controller\HomeController::companyHome" type="service_closure" id=".service_locator.XOSE210.App\Controller\HomeController::companyHome()"/>
+        <argument key="App\Controller\HomeController::developerHome" type="service_closure" id=".service_locator.I5nia.Y.App\Controller\HomeController::developerHome()"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.zHyJIs5.kernel::registerContainerConfiguration()"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.zHyJIs5.kernel::loadRoutes()"/>
         <argument key="App\Controller\CompanyController:register" type="service_closure" id=".service_locator.5SuUxla.App\Controller\CompanyController::register()"/>
         <argument key="App\Controller\CompanyController:login" type="service_closure" id=".service_locator.3QECKYg.App\Controller\CompanyController::login()"/>
         <argument key="App\Controller\DevController:register" type="service_closure" id=".service_locator.5SuUxla.App\Controller\DevController::register()"/>
         <argument key="App\Controller\DevController:login" type="service_closure" id=".service_locator.3QECKYg.App\Controller\DevController::login()"/>
+        <argument key="App\Controller\HomeController:companyHome" type="service_closure" id=".service_locator.XOSE210.App\Controller\HomeController::companyHome()"/>
+        <argument key="App\Controller\HomeController:developerHome" type="service_closure" id=".service_locator.I5nia.Y.App\Controller\HomeController::developerHome()"/>
       </argument>
     </service>
     <service id=".service_locator.mJTctrn" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -6703,7 +6737,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.pRu6x_4" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.BjnIB1P"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.RIVawP7"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.BxSdgVt"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -6733,6 +6767,8 @@
     <service id=".service_locator.n_ENPtW" alias=".service_locator.zHyJIs5"/>
     <service id=".service_locator.xpyIvFE" alias=".service_locator.5SuUxla"/>
     <service id=".service_locator.Nrz07Zz" alias=".service_locator.3QECKYg"/>
+    <service id=".service_locator.74Uu4zJ" alias=".service_locator.XOSE210"/>
+    <service id=".service_locator.BwISQ_V" alias=".service_locator.I5nia.Y"/>
     <service id=".service_locator.YoE4GGP" alias=".service_locator.ZyP9f7K"/>
   </services>
 </container>

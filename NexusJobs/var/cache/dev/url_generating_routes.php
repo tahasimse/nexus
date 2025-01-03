@@ -9,9 +9,13 @@ return [
     'app_dev_register' => [[], ['_controller' => 'App\\Controller\\DevController::register'], [], [['text', '/dev/register']], [], [], []],
     'app_dev_login' => [[], ['_controller' => 'App\\Controller\\DevController::login'], [], [['text', '/dev/login']], [], [], []],
     'app_home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], [], []],
+    'company_home' => [[], ['_controller' => 'App\\Controller\\HomeController::companyHome'], [], [['text', '/company/home']], [], [], []],
+    'developer_home' => [[], ['_controller' => 'App\\Controller\\HomeController::developerHome'], [], [['text', '/developer/home']], [], [], []],
     'App\Controller\CompanyController::register' => [[], ['_controller' => 'App\\Controller\\CompanyController::register'], [], [['text', '/company/register']], [], [], []],
     'App\Controller\CompanyController::login' => [[], ['_controller' => 'App\\Controller\\CompanyController::login'], [], [['text', '/company/login']], [], [], []],
     'App\Controller\DevController::register' => [[], ['_controller' => 'App\\Controller\\DevController::register'], [], [['text', '/dev/register']], [], [], []],
     'App\Controller\DevController::login' => [[], ['_controller' => 'App\\Controller\\DevController::login'], [], [['text', '/dev/login']], [], [], []],
     'App\Controller\HomeController::index' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], [], []],
+    'App\Controller\HomeController::companyHome' => [[], ['_controller' => 'App\\Controller\\HomeController::companyHome'], [], [['text', '/company/home']], [], [], []],
+    'App\Controller\HomeController::developerHome' => [[], ['_controller' => 'App\\Controller\\HomeController::developerHome'], [], [['text', '/developer/home']], [], [], []],
 ];

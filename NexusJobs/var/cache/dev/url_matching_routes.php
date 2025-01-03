@@ -13,6 +13,8 @@ return [
         '/dev/register' => [[['_route' => 'app_dev_register', '_controller' => 'App\\Controller\\DevController::register'], null, null, null, false, false, null]],
         '/dev/login' => [[['_route' => 'app_dev_login', '_controller' => 'App\\Controller\\DevController::login'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/company/home' => [[['_route' => 'company_home', '_controller' => 'App\\Controller\\HomeController::companyHome'], null, null, null, false, false, null]],
+        '/developer/home' => [[['_route' => 'developer_home', '_controller' => 'App\\Controller\\HomeController::developerHome'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
