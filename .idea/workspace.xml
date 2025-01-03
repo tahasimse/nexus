@@ -10,7 +10,11 @@
       <change beforePath="$PROJECT_DIR$/NexusJobs/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NexusJobs/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NexusJobs/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NexusJobs/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NexusJobs/src/Repository/DeveloperProfileRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/src/Repository/DeveloperProfileRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NexusJobs/src/Repository/JobPostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/src/Repository/JobPostRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NexusJobs/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NexusJobs/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NexusJobs/var/cache/dev/App_KernelDevDebugContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/var/cache/dev/App_KernelDevDebugContainer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NexusJobs/var/cache/dev/App_KernelDevDebugContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/var/cache/dev/App_KernelDevDebugContainer.php.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NexusJobs/var/cache/dev/App_KernelDevDebugContainer.php.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/var/cache/dev/App_KernelDevDebugContainer.php.meta.json" afterDir="false" />
@@ -674,76 +678,6 @@
       <change beforePath="$PROJECT_DIR$/NexusJobs/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/vendor/composer/autoload_static.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NexusJobs/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/vendor/composer/installed.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NexusJobs/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/NexusJobs/vendor/composer/installed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/.env.dev" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/bin/console" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/compose.override.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/compose.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/bundles.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/packages/cache.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/packages/csrf.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/packages/doctrine.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/packages/doctrine_migrations.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/packages/framework.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/packages/routing.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/packages/security.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/packages/twig.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/packages/validator.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/preload.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/routes.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/routes/framework.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/routes/security.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/secrets/dev/dev.decrypt.private.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/secrets/dev/dev.encrypt.public.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/config/services.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/migrations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/migrations/Version20250101201837.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/public/images/Background-home.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/public/images/Background-home1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/public/images/BackgroundComp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/public/images/company1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/public/images/developer1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Controller/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Controller/CompanyController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Controller/DevController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Controller/HomeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Controller/MatchController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Entity/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Entity/CompanyProfile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Entity/DeveloperProfile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Entity/Favorite.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Entity/JobPost.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Entity/Matching.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Entity/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Form/RegistrationFormType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Repository/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Repository/CompanyProfileRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Repository/DeveloperLanguageRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Repository/DeveloperProfileRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Repository/DeveloperRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Repository/FavoriteRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Repository/JobPostRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Repository/LanguageRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Repository/MatchingRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/src/Repository/UserRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/symfony.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/templates/auth/company_login.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/templates/auth/company_register.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/templates/auth/dev_login.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/templates/auth/dev_register.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/templates/base.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/templates/home/company_home.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/templates/home/developer_home.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NexusJobz/templates/home/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -760,7 +694,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/NexusJobs" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -971,21 +905,21 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/taha/Desktop/nexus&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/taha/Desktop/nexus",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
       <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
@@ -1013,6 +947,7 @@
       <workItem from="1735420237053" duration="2603000" />
       <workItem from="1735423489444" duration="247000" />
       <workItem from="1735937160114" duration="15000" />
+      <workItem from="1735937494937" duration="359000" />
     </task>
     <servers />
   </component>
