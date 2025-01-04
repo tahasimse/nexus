@@ -68,7 +68,7 @@ class __TwigTemplate_599cf53114d026713d58ede29cdb9e4e extends Template
     <div class=\"container text-center\">
         <div class=\"card mx-auto\" style=\"max-width: 600px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border: 2px solid #2F4F4F; background-color: #C89F73;\">
             <div class=\"card-header text-white\" style=\"background-color: #2F4F4F;\">
-                <h1>Bienvenue sur Nexus</h1>
+                <h1>Bienvenue sur NexusJobs</h1>
             </div>
             <div class=\"card-body\">
                   <p class=\"mb-4\" style=\"font-size: 2em; font-weight: bold; color: #2F4F4F;\">Êtes-vous ? :</p>
@@ -88,9 +88,6 @@ class __TwigTemplate_599cf53114d026713d58ede29cdb9e4e extends Template
                         <img src=\"/images/company1.jpg\" alt=\"Entreprise\" class=\"img-fluid mt-3\" style=\"max-height: 400px;\">
                     </div>
                 </div>
-            </div>
-            <div class=\"card-footer\">
-                <img src=\"/images/logo.png\" alt=\"Logo Nexus\" class=\"img-fluid\" style=\"max-height: 50px;\">
             </div>
         </div>
     </div>
@@ -135,7 +132,7 @@ class __TwigTemplate_599cf53114d026713d58ede29cdb9e4e extends Template
     <div class=\"container text-center\">
         <div class=\"card mx-auto\" style=\"max-width: 600px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border: 2px solid #2F4F4F; background-color: #C89F73;\">
             <div class=\"card-header text-white\" style=\"background-color: #2F4F4F;\">
-                <h1>Bienvenue sur Nexus</h1>
+                <h1>Bienvenue sur NexusJobs</h1>
             </div>
             <div class=\"card-body\">
                   <p class=\"mb-4\" style=\"font-size: 2em; font-weight: bold; color: #2F4F4F;\">Êtes-vous ? :</p>
@@ -149,9 +146,6 @@ class __TwigTemplate_599cf53114d026713d58ede29cdb9e4e extends Template
                         <img src=\"/images/company1.jpg\" alt=\"Entreprise\" class=\"img-fluid mt-3\" style=\"max-height: 400px;\">
                     </div>
                 </div>
-            </div>
-            <div class=\"card-footer\">
-                <img src=\"/images/logo.png\" alt=\"Logo Nexus\" class=\"img-fluid\" style=\"max-height: 50px;\">
             </div>
         </div>
     </div>

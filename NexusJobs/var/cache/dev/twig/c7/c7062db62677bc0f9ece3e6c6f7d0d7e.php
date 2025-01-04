@@ -80,7 +80,6 @@ class __TwigTemplate_21aaeb32b477aaff51d3d79c635e012d extends Template
             </form>
         </div>
         <div class=\"card-footer text-center\" style=\"padding: 15px; background-color: #F8F9FA;\">
-            <img src=\"/images/logo.png\" alt=\"Logo Nexus\" class=\"img-fluid\" style=\"max-height: 50px;\">
         </div>
     </div>
 </div>
@@ -136,7 +135,6 @@ class __TwigTemplate_21aaeb32b477aaff51d3d79c635e012d extends Template
             </form>
         </div>
         <div class=\"card-footer text-center\" style=\"padding: 15px; background-color: #F8F9FA;\">
-            <img src=\"/images/logo.png\" alt=\"Logo Nexus\" class=\"img-fluid\" style=\"max-height: 50px;\">
         </div>
     </div>
 </div>
