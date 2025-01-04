@@ -54,22 +54,25 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
         // line 6
         yield from $this->unwrap()->yieldBlock('title', $context, $blocks);
         yield "</title>
+    <link rel=\"icon\" href=\"/images/logo.png\" type=\"image/png\">
     <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\">
     ";
-        // line 8
-        yield from $this->unwrap()->yieldBlock('stylesheets', $context, $blocks);
         // line 9
+        yield from $this->unwrap()->yieldBlock('stylesheets', $context, $blocks);
+        // line 10
         yield "</head>
 <body>
 
     <!-- Menu de navigation -->
     <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
         <div class=\"container-fluid\">
-            <!-- Lien vers la page d'accueil -->
+            <!-- Lien vers la page d'accueil avec logo -->
             <a class=\"navbar-brand\" href=\"";
-        // line 16
+        // line 17
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
-        yield "\">Nexus</a>
+        yield "\">
+                <img src=\"/images/logo.png\" alt=\"Logo Nexus\" class=\"img-fluid\" style=\"max-height: 40px;\">
+            </a>
             <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                 <span class=\"navbar-toggler-icon\"></span>
             </button>
@@ -77,13 +80,13 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
                 <ul class=\"navbar-nav ms-auto\">
                     <li class=\"nav-item\">
                         <a class=\"nav-link\" href=\"";
-        // line 23
+        // line 26
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("company_home");
         yield "\">Accueil Entreprise</a>
                     </li>
                     <li class=\"nav-item\">
                         <a class=\"nav-link\" href=\"";
-        // line 26
+        // line 29
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("developer_home");
         yield "\">Accueil Développeur</a>
                     </li>
@@ -94,9 +97,9 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
 
     <!-- Contenu principal -->
     ";
-        // line 34
+        // line 37
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 35
+        // line 38
         yield "
     <!-- Bootstrap JS Bundle -->
     <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js\"></script>
@@ -126,7 +129,7 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
         yield from [];
     }
 
-    // line 8
+    // line 9
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -142,7 +145,7 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
         yield from [];
     }
 
-    // line 34
+    // line 37
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -179,7 +182,7 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  146 => 34,  130 => 8,  113 => 6,  100 => 35,  98 => 34,  87 => 26,  81 => 23,  71 => 16,  62 => 9,  60 => 8,  55 => 6,  48 => 1,);
+        return array (  149 => 37,  133 => 9,  116 => 6,  103 => 38,  101 => 37,  90 => 29,  84 => 26,  72 => 17,  63 => 10,  61 => 9,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -190,6 +193,7 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
     <meta charset=\"UTF-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>{% block title %}Nexus{% endblock %}</title>
+    <link rel=\"icon\" href=\"/images/logo.png\" type=\"image/png\">
     <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\">
     {% block stylesheets %}{% endblock %}
 </head>
@@ -198,8 +202,10 @@ class __TwigTemplate_c6b4b10d2341bf516e8b61462e563bb5 extends Template
     <!-- Menu de navigation -->
     <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
         <div class=\"container-fluid\">
-            <!-- Lien vers la page d'accueil -->
-            <a class=\"navbar-brand\" href=\"{{ path('app_home') }}\">Nexus</a>
+            <!-- Lien vers la page d'accueil avec logo -->
+            <a class=\"navbar-brand\" href=\"{{ path('app_home') }}\">
+                <img src=\"/images/logo.png\" alt=\"Logo Nexus\" class=\"img-fluid\" style=\"max-height: 40px;\">
+            </a>
             <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                 <span class=\"navbar-toggler-icon\"></span>
             </button>
